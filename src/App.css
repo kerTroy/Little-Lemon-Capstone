@@ -1,38 +1,230 @@
-.App {
-  text-align: center;
+:root{
+  --p1 : #495e57;
+  --p2 : #f4ce14;
+  --s : #ee9972;
+  --s2 : #fbdabb;
+
 }
 
-.App-logo {
-  height: 40vmin;
+
+.f-holder{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+}
+nav > .container-fluid{
+  display: flex;
+  justify-content: center !important;
+}
+
+
+header{
+  width: 100%;
+  height: fit-content;
+  background-color: var(--p1);
+  position: relative;
+}
+
+header h1 {
+  color: #000000;
+  font-family: '';
+  font-weight: bold;
+  font-size: 64px;
+  margin-left: 70px;
+}
+header img{
+  right: 500px;
+  top: 50px;
+  position: absolute;
+  border-radius: 30px;
+  width: 375px;
+  height: 375px;
+  overflow: hidden;
+}
+
+.text-white-2 {
+  width: 800px;
+  margin-left: 70px;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.text-white-1 {
+  width: 800px;
+  margin-left: 70px;
+  font-size: 48px;
+  font-family:'';
+  font-weight: bold;
+}
+
+
+.lemon-btn{
+  background-color: #f4ce14;
+}
+
+.navbar-nav li a{
+  color: #000 !important;
+  font-weight: 500;
+}
+
+nav img{
+  width: 12vh;
+}
+
+.week-s .d-flex{
+  justify-content: space-between;
+}
+
+.week-s .card{
+  width: 80%;
+  border: 1px solid;
+}
+.card-title span{
+  color: #ee9972;
+}
+
+.form-cona {
+  position: relative;
+  margin: 20px 0 40px;
+  width: 100%
+}
+
+.form-cona input {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px #fff solid;
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 18px;
+  color: #fff;
+}
+
+.form-cona input:focus,
+.form-cona input:valid {
+  outline: 0;
+  border-bottom-color: lightblue;
+}
+
+.form-cona label {
+  position: absolute;
+  top: 15px;
+  left: 0;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.form-cona label span {
+  display: inline-block;
+  font-size: 18px;
+  min-width: 5px;
+  color: #fff;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-cona input:focus+label span,
+.form-cona input:valid+label span {
+  color: lightblue;
+  transform: translateY(-30px);
+}
+form{
+  width: 40%;
+}
+.form-holder{
+  background-color: #495e57;
+}
+
+
+.land-img{
+  width:100%;
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -77;
+}
+
+.land{
+position: relative;
+background-color: #495e57bd;
+height: 95vh;
+
+}
+
+.lemon-text{
+  color: var(--p2);
+}
+
+.login{
+  background-color: var(--p1);
+  height: 100vh;
+}
+
+.login form{
+  width: 30%;
+}
+
+.reg form{
+  width: 30%;
+}
+.reg{
+  background-color: #495e57;
+  height: 100vh;
+}
+
+.res-card{
+  width: 90%;
+  height: auto;
+  border: 1px solid #000;
+  border-top: 5px solid #f4ce14;
+  box-shadow: 2px 2px 8px #000;
+}
+
+.res-time{
+  color: #495e57;
+
+}
+
+.occ{
+  color: var(--s);
+  font-weight: 500;
+
+}
+
+.booked-msg{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.61);
+}
+
+.booked-msg .booked-msg-body{
+  width: 50%;
+  background-color: var(--s2);
+
+}
+
+
+@media(max-width:600px){
+
+  .navbar-nav li{
+    display: flex !important;
+    flex-direction: row;
+    justify-content: baseline !important;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  header img{
+display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  form{
+    width: 90%;
+  }
+  .booked-msg-body{
+    width: 90% !important;
+  }
+
+  .booked-msg-body .f-holder{
+    flex-direction: column;
   }
 }
